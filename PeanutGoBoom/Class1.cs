@@ -40,7 +40,7 @@ namespace PeanutGoBoom
 
 
         [PluginPriority(LoadPriority.Highest)]
-        [PluginEntryPoint("Peanut boom ", "version 1.0","Peanut explodes on death. ", " made by Typical")]
+        [PluginEntryPoint("Peanut boom ", "version 1.1","Peanut explodes on death. ", " made by Typical")]
         
         void LoadPlugin()
         {
