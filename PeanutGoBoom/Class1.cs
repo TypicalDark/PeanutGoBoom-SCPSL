@@ -70,7 +70,7 @@ namespace PeanutGoBoom
                 {
                     ev.Player.ReceiveHint(Plugin.Config.Hint, 5);
                     var item = ev.Player.ReferenceHub.inventory.CreateItemInstance(new ItemIdentifier(ItemType.GrenadeHE, ItemSerialGenerator.GenerateNext()), false) as ThrowableItem;
-                    ///
+
                     TimeGrenade grenadeboom = (TimeGrenade)UnityEngine.Object.Instantiate(item.Projectile, ev.Player.Position, Quaternion.identity);
                     grenadeboom._fuseTime = Config.PlayerFuse;
                     grenadeboom.NetworkInfo = new PickupSyncInfo(item.ItemTypeId, item.Weight, item.ItemSerial);
