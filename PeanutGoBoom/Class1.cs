@@ -63,7 +63,7 @@ namespace PeanutGoBoom
         [PluginEvent(ServerEventType.PlayerChangeRole)]
         public void OnDeath(PlayerChangeRoleEvent ev)
         {
-            Log.Debug(ev.Player.Role.ToString());
+ 
             if (AllExplode == true)
             {
                 if (ev.NewRole == RoleTypeId.Spectator)
