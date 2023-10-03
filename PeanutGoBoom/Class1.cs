@@ -84,14 +84,12 @@ namespace PeanutGoBoom
             {
                 ev.Player.ReceiveHint(Plugin.Config.Hint, 5);
                 var item = ev.Player.ReferenceHub.inventory.CreateItemInstance(new ItemIdentifier(ItemType.GrenadeHE, ItemSerialGenerator.GenerateNext()), false) as ThrowableItem;
-                ///
                 TimeGrenade grenadeboom = (TimeGrenade)UnityEngine.Object.Instantiate(item.Projectile, ev.Player.Position, Quaternion.identity);
                 grenadeboom._fuseTime = Config.Peanutfuse;
                 grenadeboom.NetworkInfo = new PickupSyncInfo(item.ItemTypeId, item.Weight, item.ItemSerial);
                 grenadeboom.PreviousOwner = new Footprint(ev.Player != null ? ev.Player.ReferenceHub : ReferenceHub.HostHub);
                 NetworkServer.Spawn(grenadeboom.gameObject);
                 grenadeboom.ServerActivate();
-                ///
             }
         }
     }
